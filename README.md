@@ -1,2 +1,0 @@
-# ovodepascoa
-array
