@@ -21,16 +21,20 @@ const products = [
     }
 ]
 
-products.forEach(produto => {
+products.forEach((produtos)=> {
     const box = document.createElement("li");
     box.classList.add("box");
     box.innerHTML = `
-        <img class="ovo" src="${produto.image}" alt="${produto.name}">
-        <h3 class="eggtitle">${produto.name}</h3>
-        <p class="preco">R$ ${produto.price.toFixed(2)}</p>
+        <img class="ovo" src="${produtos.image}" alt="Produto">
+        <h2 class="eggtitle"> ${produtos.name}</h2>
+        <div class="container"> 
+        <p class="preco" >R$ ${produtos.price.toFixed(2)}</p>
         <button class="btn">Comprar</button>
+        </div>
     `;
-    
-    const lista = document.getElementById('lista')
-    lista.appendChild(box);
-});
+
+    const lista = document.getElementById("lista");
+    lista.appendChild(box)
+
+}) 
+
